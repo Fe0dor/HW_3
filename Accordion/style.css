@@ -1,0 +1,76 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.accordion-item:first-child button {
+    border-top-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.accordion-item:last-child div {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.accordion-header {
+    border: 1px solid #480376;
+    border-top-width: 0;
+    display: flex;
+    padding: 1rem 0.75rem;
+    width: 100%;
+    align-items: center;
+    background-color: unset;
+    font-size: 1rem;
+    transition: background-color .5s;
+}
+
+.accordion-header::after {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-left: auto;
+    content: "";
+    background-image: url(./media/closed.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    transition: transform .2s ease-in-out;
+}
+
+.accordion-header.selectedHeader::after {    
+    transform: rotate(-180deg);
+}
+
+.accordion-text {
+    border-right: 1px solid #480376;
+    border-left: 1px solid #480376;
+    border-bottom: 1px solid #480376;
+    overflow: hidden;
+    height: 0;
+    transition: height .5s ease;
+}
+
+.selectedText {
+    
+}
+
+.selectedHeader {
+    background-color: #c6bce4;
+}
+
+.text {
+    padding: 1rem 0.75rem;
+}
+
